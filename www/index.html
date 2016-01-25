@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/af.ui.css">
+        <link rel="stylesheet" type="text/css" href="css/icons.css">
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="js/appframework.ui.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="login/loginController.js"></script>
+        <script type="text/javascript" src="timeline/timelineController.js"></script>
+        <script type="text/javascript" src="about/aboutController.js"></script>
+
+        <div id="splashscreen" class="ui-loader heavy">
+            <span class="icon loading spin"></span>
+        </div>
+
+        <div class="view" id="login_view">
+            <div class="panel" id="login" data-selected="true" data-include="login/index.html"/></div>
+        </div>
+
+        <div class="view" id="mainview">
+            <header><h1></h1></header>
+
+            <div class="pages">
+
+                <div class="panel" id="timeline" data-title="Home"
+                    data-include='timeline/index.html' data-selected="true"></div>
+
+                <div class="panel" id="favorites" data-title="Test"
+                    data-include='favorites/index.html'></div>
+
+                <div class="panel" id="about" data-title="Messages"
+                    data-include='about/index.html'></div>
+
+            </div>
+
+            <footer id="timelineFooter">
+                <a href="#timeline" class="icon home" data-transition="slide-left">Main</a>
+                <a href="#favorites" class="icon heart" data-transition="slide-left">Favorites</a>
+                <a href="#about" class="icon html5" data-transition="slide-left">About</a>
+            </footer>
+        </div>
+    </body>
+</html>
